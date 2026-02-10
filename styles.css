@@ -1,0 +1,224 @@
+/* Aplica a TODOS los elementos */
+* {
+box-sizing: border-box;                 /* Incluye padding y borde dentro del tamaño */
+font-family: 'Roboto', sans-serif;     /* Fuente principal del sitio */
+}
+
+/* Configuración general del body */
+body {
+margin: 0;                             /* Elimina márgenes por defecto */
+background: linear-gradient(135deg,#0d1426,#132965); /* Gradiente azul */
+color: white;                         /* Texto blanco */
+}
+
+/* ================= NAVBAR ================= */
+
+html {
+scroll-behavior: smooth;              /* Scroll suave al usar enlaces internos */
+}
+
+.navbar {
+position: fixed;                     /* Navbar siempre visible */
+top: 0;
+width: 100%;
+background: rgba(15,23,42,.9);        /* Fondo con transparencia */
+display: flex;                       /* Elementos en fila */
+justify-content: center;             /* Centra enlaces */
+gap: 30px;                           /* Espacio entre links */
+padding: 15px;
+z-index: 10;                         /* Se mantiene encima del contenido */
+backdrop-filter: blur(10px);         /* Efecto glass */
+}
+
+.navbar a {
+color: white;
+text-decoration: none;               /* Quita subrayado */
+font-size: 14px;
+}
+
+.navbar a:hover {
+color: #38bdf8;                      /* Azul celeste al pasar mouse */
+}
+
+/* Espacio extra arriba del hero para navbar fijo */
+.hero {
+padding-top: 130px;
+}
+
+/* ================= TIPOGRAFÍA ================= */
+
+h1,h2,h3 {
+font-weight: 500;                    /* Semi bold para títulos */
+}
+
+p {
+font-weight: 300;                    /* Texto ligero */
+line-height: 1.6;                   /* Mejor lectura */
+}
+
+/* ================= HERO ================= */
+
+.hero {
+
+padding: 80px 20px;
+text-align: center;
+}
+
+/* Imagen principal circular */
+.avatar {
+width: 200px;
+height: 200px;
+border-radius: 50%;                  /* Hace la imagen redonda */
+border: 4px solid #38bdf8;           /* Borde celeste */
+object-fit: cover;                  /* Evita deformar imagen */
+}
+
+/* Texto de profesión */
+.role {
+color: #38bdf8;
+margin-bottom: 20px;
+}
+
+/* ================= BOTÓN ================= */
+
+.btn {
+background: #f472b6;                 /* Rosa */
+color: white;
+padding: 10px 20px;
+border-radius: 20px;                /* Bordes redondeados */
+text-decoration: none;
+}
+
+/* ================= CONTENEDOR PRINCIPAL ================= */
+
+.container {
+max-width: 900px;                   /* Limita ancho */
+margin: auto;                       /* Centra horizontal */
+padding: 40px 20px;
+}
+
+/* ================= SECCIONES ================= */
+
+.section {
+margin-bottom: 60px;
+scroll-margin-top: 90px;            /* Evita que navbar tape títulos */
+}
+
+.section h2 {
+color: #38bdf8;
+text-align: center;
+}
+
+/* ================= SOBRE MI ================= */
+
+/* Contenedor foto + texto */
+.about-content {
+display: flex;                      /* Dos columnas */
+gap: 40px;                          /* Espacio entre ellas */
+align-items: center;               /* Centrado vertical */
+}
+
+/* Foto dentro de Sobre mí */
+.about-photo {
+width: 200px;
+border-radius: 20px;               /* Bordes suaves */
+object-fit: cover;
+}
+
+/* Texto ocupa el espacio restante */
+.about-text {
+flex: 1;
+}
+
+/* Responsive móvil */
+@media (max-width: 700px) {
+
+.about-content {
+flex-direction: column;            /* Apila elementos */
+text-align: center;
+}
+
+.about-photo {
+width: 160px;
+}
+
+}
+
+/* ================= HERRAMIENTAS & TECNOLOGÍAS ================= */
+
+/* Contenedor general que organiza los grupos en forma de grid */
+
+.tools {
+display: grid;                                                  /* Activa Grid */
+grid-template-columns: repeat(auto-fit,minmax(220px,1fr));      /* Crea columnas automáticas adaptables */
+gap: 25px;                                                      /* Espacio entre tarjetas */
+}
+
+/* Cada tarjeta de categoría */
+
+.tool-group {
+background: #1e293b;                               /* Fondo azul oscuro */
+padding: 10px;                                       /* Espaciado interno */
+border-radius: 15px;                                 /* Bordes redondeados */
+text-align: center;
+}
+
+/* Títulos de cada grupo */
+
+.tool-group h3 {
+color: #38bdf8;                                /* color del titulo de grupo */
+margin-top: 5px;                                   /* Separación borde superior */
+margin-bottom: 20px; 
+text-align: center;                             /* Separación del contenido */
+}
+
+/* Contenedor interno de etiquetas */
+
+.tool-items {
+display: flex;                                    /* Etiquetas en fila */
+flex-wrap: wrap;                                 /* Permite salto de línea */
+gap: 10px;                                       /* Espacio entre etiquetas */
+justify-content: center;
+}
+
+/* Cada herramienta individual */
+
+.tool-items span {
+background: #0f172a;                              /* Fondo más oscuro */
+padding: 6px 12px;                               /* Tamaño del badge */
+border-radius: 20px;                             /* Forma tipo píldora */
+font-size: 13px;                                 /* Texto pequeño */
+}
+
+/* ================= PROYECTOS ================= */
+
+.projects {
+display: flex;                     /* Cards en fila */
+gap: 20px;
+overflow-x: auto;                 /* Scroll horizontal */
+padding-bottom: 10px;
+}
+
+.project-card {
+min-width: 220px;
+width: 300px;
+height: 400px;
+background: #1e293b;
+padding: 20px;
+border-radius: 15px;
+}
+
+/* ================= CONTACTO ================= */
+
+.contact p {
+margin: 8px 0;
+text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+text-align: center;
+padding: 20px;
+color: #94a3b8;
+}
